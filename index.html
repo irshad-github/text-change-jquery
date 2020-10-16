@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+</head>
+<body>
+<script>
+
+				var entry = "Math Homework Help.,Statistics Homework Help.,Physics Homework Help.,Chemistry Homework Help.,Biology Homework Help.,Engineering Homework Help.,English Homework Help.,Essay Writing Help.,History Homework Help.,Accounting Homework Help.,Economics Homework Help.,Science Homework Help.,Lab Report Help.,Project Report Help.,Get Live Tutor Help.,";
+
+				var _CONTENT = entry.split(",");
+
+			</script>
+
+			<span id="text" class="line1"></span>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function ()
+	{
+		var t, n = 0,
+				a = 0,
+				o = document.querySelector("#text");
+
+		function i()
+		{
+			var e;
+			null != o && (e = _CONTENT[n].substring(0, a + 1), o.innerHTML = e, a++, e === _CONTENT[n] && (clearInterval(t), setTimeout(function ()
+			{
+				t = setInterval(r, 50)
+			}, 1e3)))
+		}
+
+		function r()
+		{
+			var e;
+			null != o && (e = _CONTENT[n].substring(0, a - 1), o.innerHTML = e, a--, "" === e && (clearInterval(t), n == _CONTENT.length - 1 ? n = 0 : n++, a = 0, setTimeout(function ()
+			{
+				t = setInterval(i, 50)
+			}, 200)))
+		}
+		t = setInterval(i, 100)
+	});
+
+</script>
+</body>
+</html>
